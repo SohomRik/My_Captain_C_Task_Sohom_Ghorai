@@ -17,7 +17,6 @@ int main()
        {
             i++;
             fseek(fp,-i,SEEK_END);
-            //printf("%c",fgetc(fp));
             ch=fgetc(fp);
             printf("%c",ch);
       }
@@ -27,8 +26,6 @@ int main()
     printf("\nCopying One file to Another\n");		
 	printf("\nEnter the filename to open for reading \n");
 	scanf("%s", filename);
-
-	// Open one file for reading
 	fptr1 = fopen(filename, "r");
 	if (fptr1 == NULL)
 	{
@@ -38,16 +35,12 @@ int main()
 
 	printf("Enter the filename to open for writing \n");
 	scanf("%s", filename);
-
-	// Open another file for writing
 	fptr2 = fopen(filename, "w");
 	if (fptr2 == NULL)
 	{
 		printf("Cannot open file %s \n", filename);
 		exit(0);
 	}
-
-	// Read contents from file
 	c = fgetc(fptr1);
 	while (c != EOF)
 	{
@@ -63,7 +56,6 @@ int main()
 	 printf("\nEnter the filename to open \n");
     scanf("%s", filename);
   
-    // Open file
     fptr3 = fopen(filename, "r");
     if (fptr3 == NULL)
     {
@@ -71,7 +63,6 @@ int main()
         exit(0);
     }
   
-    // Read contents from file
     c = fgetc(fptr3);
     while (c != EOF)
     {
